@@ -1,0 +1,24 @@
+{
+  "name": "sudokutest",
+  "version": "1.0.0",
+  "description": "node.js application to validate Sudoku solutions.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [ 
+    "sudoku", 
+    "validator", 
+    "nodejs", 
+    "javascript", 
+    "puzzle", 
+    "grid", 
+    "game", 
+    "solution", 
+    "unique", 
+    "zeros" 
+  ],
+  "author": "gadiim",
+  "license": "MIT"
+}
