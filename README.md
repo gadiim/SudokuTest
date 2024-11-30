@@ -6,7 +6,7 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Function Descriptions](#function_descriptions)
+- [Function Descriptions](#function-descriptions)
 - [Project Structure](#project-structure)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
