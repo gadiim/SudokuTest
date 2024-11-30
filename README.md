@@ -59,6 +59,42 @@ This will execute the script to check the Sudoku grids defined in the `validArra
    }
 ```
 </details>
+
+<details><summary><strong>findZeros()</strong>: Checks if there are any zeros in the Sudoku grid.</summary>
+
+```javascript
+function findZeros(array) {
+    let isNoZero = true;
+
+    for (let row = 0; row < array.length; row++) {
+        for (let col = 0; col < array[row].length; col++) {
+            if (array[row][col] === 0) {
+                isNoZero = false;
+                break;
+            }
+        }
+        if (!isNoZero) break;
+    }
+    return isNoZero;
+};
+```
+</details>
+
+<details><summary><strong>hasUniqueRows()</strong>: Checks if each row in the Sudoku grid contains unique values.</summary>
+
+```javascript
+function hasUniqueRows(array) {
+    for (let i = 0; i < array.length; i++) {
+        let row = array[i];
+        if (row.length !== getUniqueValues(row).length) {
+            return false;
+        }
+    }
+    return true;
+};
+```
+</details>
+
 - `findZeros()`: Checks if there are any zeros in the Sudoku grid.
 - `hasUniqueRows()`: Checks if each row in the Sudoku grid contains unique values.
 - `hasUniqueColumns()`: Checks if each column in the Sudoku grid contains unique values.
