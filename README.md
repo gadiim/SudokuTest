@@ -32,7 +32,7 @@ To get started with this project, follow these steps:
 
 ### Prerequisites 
 - Node.js installed on your machine.
-- 
+
 ### Installation 
 1. Clone the repository:
    ```bash
@@ -95,13 +95,64 @@ function hasUniqueRows(array) {
 ```
 </details>
 
-- `findZeros()`: Checks if there are any zeros in the Sudoku grid.
-- `hasUniqueRows()`: Checks if each row in the Sudoku grid contains unique values.
-- `hasUniqueColumns()`: Checks if each column in the Sudoku grid contains unique values.
-- `hasUniqueBlocks()`: Checks if each 3x3 block in the Sudoku grid contains unique values.
-- `validSolution()`: Combines all checks (rows, columns, blocks, and zeros) to validate the Sudoku solution.
+<details><summary><strong>hasUniqueColumns()</strong>: Checks if each 3x3 block in the Sudoku grid contains unique values.</summary>
 
+```javascript
+function hasUniqueColumns(array) {
+    for (let i = 0; i < array.length; i++) {
+        let column = array.map(row => row[i]);
+        if (column.length !== getUniqueValues(column).length) {
+            return false;
+        }
+    }
+    return true;
+};
+```
+</details>
 
+<details><summary><strong>hasUniqueBlocks()</strong>: Checks if each 3x3 block in the Sudoku grid contains unique values.</summary>
+
+```javascript
+function hasUniqueBlocks(array) {
+    const blockArray = [];
+    for (let rowStart = 0; rowStart < array.length; rowStart += array.length / 3) {
+        for (let colStart = 0; colStart < array.length; colStart += array.length / 3) {
+            const block = [];
+            for (let i = 0; i < array.length / 3; i++) {
+                for (let j = 0; j < array.length / 3; j++) {
+                    block.push(array[rowStart + i][colStart + j]);
+                }
+            }
+            blockArray.push(block);
+        }
+    }
+    return hasUniqueRows(blockArray);
+};
+
+```
+</details>
+
+<details><summary><strong>validSolution()</strong>: Combines all checks (rows, columns, blocks, and zeros) to validate the Sudoku solution.</summary>
+
+```javascript
+function validateSudoku(array) { 
+    if (!findZeros(array)) { 
+        return false; 
+    } 
+    if (!hasUniqueRows(array)) { 
+        return false; 
+    } 
+    if (!hasUniqueColumns(array)) { 
+        return false; 
+    } 
+    if (!hasUniqueBlocks(array)) { 
+        return false; 
+    } 
+    return true; 
+}; 
+
+```
+</details>
 
 ## Project Structure
 
