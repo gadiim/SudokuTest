@@ -59,10 +59,10 @@ This will execute the script to check the Sudoku grids defined in the `validArra
 - `validSolution()`: Combines all checks (rows, columns, blocks, and zeros) to validate the Sudoku solution.
 
 
-<details>
+
 <summary>`getUniqueValues()`</summary>
 <p>Returns an array of unique values from the input array.</p>
-  
+<details>  
 ```javascript
 function getUniqueValues(arr) {
     return [...new Set(arr)];
