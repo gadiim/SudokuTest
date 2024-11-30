@@ -1,8 +1,11 @@
 import {validArray} from './validArray.js';
 import {invalidArray} from './invalidArray.js';
 
-
 let isValid = false;
+
+function getUniqueValues(array) {
+    return [...new Set(array)];
+};
 
 function findZeros(array) {
     let isNoZero = true;
@@ -17,10 +20,6 @@ function findZeros(array) {
         if (!isNoZero) break;
     }
     return isNoZero;
-};
-
-function getUniqueValues(array) {
-    return [...new Set(array)];
 };
 
 function hasUniqueRows(array) {
