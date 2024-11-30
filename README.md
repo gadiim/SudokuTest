@@ -58,7 +58,7 @@ This will execute the script to check the Sudoku grids defined in the `validArra
 - `hasUniqueBlocks()`: Checks if each 3x3 block in the Sudoku grid contains unique values.
 - `validSolution()`: Combines all checks (rows, columns, blocks, and zeros) to validate the Sudoku solution.
 
-<details> <summary><strong>getUniqueValues(arr)</strong></summary> <p>Returns an array of unique values from the input array.</p> ```javascript function getUniqueValues(arr) { return [...new Set(arr)]; }</details>
+<details> <summary><strong>getUniqueValues(arr)</strong></summary> <p>Returns an array of unique values from the input array.</p> ```javascript function getUniqueValues(arr) { return [...new Set(arr)]; }```</details>
    
 ## Project Structure
 
