@@ -51,7 +51,13 @@ To validate Sudoku solutions, run the following command:
 This will execute the script to check the Sudoku grids defined in the `validArray.js` and `invalidArray.js` files.
 
 ## Function Descriptions
-- `getUniqueValues()`: Returns an array of unique values from the input array.
+- `getUniqueValues()`: Returns an array of unique values from the input array.<details><summary></summary>    
+```javascript
+   function getUniqueValues(arr) {
+       return [...new Set(arr)];
+   }
+```
+</details>
 - `findZeros()`: Checks if there are any zeros in the Sudoku grid.
 - `hasUniqueRows()`: Checks if each row in the Sudoku grid contains unique values.
 - `hasUniqueColumns()`: Checks if each column in the Sudoku grid contains unique values.
@@ -59,17 +65,6 @@ This will execute the script to check the Sudoku grids defined in the `validArra
 - `validSolution()`: Combines all checks (rows, columns, blocks, and zeros) to validate the Sudoku solution.
 
 
-
-<summary>`getUniqueValues()`</summary>
-<p>Returns an array of unique values from the input array.</p>
-<details><summary></summary> 
-   
-```javascript
-   function getUniqueValues(arr) {
-       return [...new Set(arr)];
-   }
-```
-</details>
 
 ## Project Structure
 
