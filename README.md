@@ -6,6 +6,7 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Function Descriptions](#function_descriptions)
 - [Project Structure](#project-structure)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
@@ -27,11 +28,11 @@ You can find the task details [here](https://github.com/gadiim/SudokuTest/blob/m
 - JavaScript (ES6 Modules)
 
 ## Getting Started
-
 To get started with this project, follow these steps:
 
 ### Prerequisites 
 - Node.js installed on your machine.
+- 
 ### Installation 
 1. Clone the repository:
    ```bash
@@ -43,13 +44,19 @@ To get started with this project, follow these steps:
    ```
 
 ## Usage
-
 To validate Sudoku solutions, run the following command:
    ```bash
    npm test
    ```
 This will execute the script to check the Sudoku grids defined in the `validArray.js` and `invalidArray.js` files.
 
+## Function Descriptions
+- `getUniqueValues()`: Returns an array of unique values from the input array.
+- `findZeros()`: Checks if there are any zeros in the Sudoku grid.
+- `hasUniqueRows()`: Checks if each row in the Sudoku grid contains unique values.
+- `hasUniqueColumns()`: Checks if each column in the Sudoku grid contains unique values.
+- `hasUniqueBlocks()`: Checks if each 3x3 block in the Sudoku grid contains unique values.
+- `validSolution()`: Combines all checks (rows, columns, blocks, and zeros) to validate the Sudoku solution.
 
 ## Project Structure
 
