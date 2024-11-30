@@ -62,11 +62,12 @@ This will execute the script to check the Sudoku grids defined in the `validArra
 
 <summary>`getUniqueValues()`</summary>
 <p>Returns an array of unique values from the input array.</p>
-<details><summary></summary>  
+<details><summary></summary> 
+   
 ```javascript
-function getUniqueValues(arr) {
-    return [...new Set(arr)];
-}
+   function getUniqueValues(arr) {
+       return [...new Set(arr)];
+   }
 ```
 </details>
 
